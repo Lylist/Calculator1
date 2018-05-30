@@ -27,6 +27,6 @@ private:
 	int real, imag;//real·Ö×Óimag·ÖÄ¸    
 };
 
-
+extern int sec;
 extern string takeTest();
 extern complex Caculate(string s);
