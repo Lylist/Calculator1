@@ -12,9 +12,9 @@ string takeTest();                        //题目生成函数
 
 string getSignal(int n)
 {
-	string signal[6] = { "+","-","*","/","^","**" };
+	string signal[2][5] = { "+","-","*","/","**","+","-","*","/","^" };
 
-	return signal[rand() % n];
+	return signal[sec-1][rand() % n];
 }
 
 int random(double start, double end)
@@ -25,14 +25,14 @@ int random(double start, double end)
 
 string takeTest()
 {
-	srand((unsigned)time(NULL));
+	
 	int num1, num2;
 	string signal;
 	string ans = "";
 
-	signal = getSignal(6);
-	num1 = random(0, 200);
-	num2 = random(1, 200);
+	signal = getSignal(5);
+	num1 = random(1, 100);
+	num2 = random(1, 100);
 
 	if (signal == "'")
 	{
@@ -59,8 +59,8 @@ string takeTest()
 	signal = getSignal(4);
 	ans = ans + signal;
 
-	signal = getSignal(6);
-	num1 = random(0, 100);
+	signal = getSignal(5);
+	num1 = random(1, 100);
 	num2 = random(1, 100);
 
 	if (signal == "'")
