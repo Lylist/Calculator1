@@ -5,6 +5,7 @@
 #include <iostream>
 #include "cal.h"
 using namespace std;
+int sec;
 
 int read(char str[])
 {
@@ -21,6 +22,7 @@ int read(char str[])
 
 int main(int argc, char *argv[])
 {
+	srand((unsigned)time(NULL) * 10000);
 	int rightans = 0, wrong = 0;
 	if (argc < 2)
 	{
@@ -29,15 +31,34 @@ int main(int argc, char *argv[])
 	}
 	else if (strcmp(argv[1], "-a") == 0)
 	{
+
 		int Num = read(argv[2]);
 		if (Num == -1)
 		{
 			printf("Please use useful number\n");
 			return 0;
 		}
-		
-		while (Num--)
+		printf("请选择乘方运算的符号：\n1：表示选择** 2：表示选择^\n");
+		cin >> sec;
+		printf("请输入：1:表示我要在线答题 2：表示我要离线答题\n");
+		int seclect;
+		cin >> seclect;
+		if (seclect == 2)
 		{
+			printf("请输入文件地址");
+			char ss[1000];
+			scanf("%s", ss);
+			freopen(ss, "w", stdout);
+			while (Num--)
+			{
+				string str = takeTest();
+				cout << str << endl;
+			}
+			return 0;
+		}
+
+		while (Num--)
+		{	
 			string str = takeTest();
 			cout << str << endl << "Please answer" << endl;;
 			string ans;
