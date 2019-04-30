@@ -1,3 +1,4 @@
+//test
 #include <cstdio>
 #include <cstring>
 #include <time.h>
@@ -23,6 +24,7 @@ int read(char str[])
 int main(int argc, char *argv[])
 {
     //hahahah
+
 	srand((unsigned)time(NULL) * 10000);
 	int rightans = 0, wrong = 0;
 	if (argc < 2)
@@ -39,14 +41,14 @@ int main(int argc, char *argv[])
 			printf("Please use useful number\n");
 			return 0;
 		}
-		printf("��ѡ��˷�����ķ��ţ�\n1����ʾѡ��** 2����ʾѡ��^\n");
+		printf("请选择乘方运算的符号：\n1：表示选择** 2：表示选择^\n");
 		cin >> sec;
-		printf("�����룺1:��ʾ��Ҫ���ߴ��� 2����ʾ��Ҫ���ߴ���\n");
+		printf("请输入：1:表示我要在线答题 2：表示我要离线答题\n");
 		int seclect;
 		cin >> seclect;
 		if (seclect == 2)
 		{
-			printf("�������ļ���ַ");
+			printf("请输入文件地址");
 			char ss[1000];
 			scanf("%s", ss);
 			freopen(ss, "w", stdout);
@@ -76,7 +78,7 @@ int main(int argc, char *argv[])
 		}
 	}
 	else printf("Please use ture command\n");
-	printf("��ȷ�ʣ�%d/%d\n", rightans, rightans + wrong);
+	printf("正确率：%d/%d\n", rightans, rightans + wrong);
 	system("Pause");
 	return 0;
 }
