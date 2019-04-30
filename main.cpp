@@ -22,6 +22,7 @@ int read(char str[])
 
 int main(int argc, char *argv[])
 {
+    //hahahah
 	srand((unsigned)time(NULL) * 10000);
 	int rightans = 0, wrong = 0;
 	if (argc < 2)
@@ -58,7 +59,7 @@ int main(int argc, char *argv[])
 		}
 
 		while (Num--)
-		{	
+		{
 			string str = takeTest();
 			cout << str << endl << "Please answer" << endl;;
 			string ans;
